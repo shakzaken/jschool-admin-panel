@@ -1,24 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
+import 'semantic-ui-css/semantic.min.css'
 import './App.css';
+import {Navbar} from "./components/common/navbar/navbar";
+import {Sidebar} from "./components/common/sidebar/sidebar";
+import {PanelBody} from "./components/common/panel-body/panel-body";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <div className="app-body">
+        <Sidebar/>
+        <PanelBody/>
+      </div>
+
     </div>
   );
 }
