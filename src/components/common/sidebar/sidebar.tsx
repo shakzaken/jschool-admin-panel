@@ -3,13 +3,13 @@ import {Menu} from "semantic-ui-react";
 import "./sidebar.scss";
 import {inject} from "mmlpx";
 import {observer} from "mobx-react";
-import {MenuOptions, SidebarVm} from "./sidebar.vm";
+import {MenuOptions, RootStore} from "../../../root-store";
 
 
 @observer
 export class Sidebar extends React.Component{
 
-  @inject(SidebarVm) vm:SidebarVm;
+  @inject(RootStore) vm:RootStore;
 
   render(){
 

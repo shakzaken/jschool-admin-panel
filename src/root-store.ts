@@ -1,4 +1,4 @@
-import {ViewModel} from "mmlpx";
+import {Store} from "mmlpx";
 import {observable,action} from "mobx";
 
 export enum MenuOptions {
@@ -10,8 +10,8 @@ export enum MenuOptions {
   DegreeList="DegreeList"
 }
 
-@ViewModel
-export class SidebarVm {
+@Store
+export class RootStore {
 
   @observable
   activeMenu: MenuOptions = null;
